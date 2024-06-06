@@ -1,7 +1,22 @@
 import Image from "next/image";
+import MaxwidthWrapper from "./Components/MaxWidthWrapper";
+import Calc from "./Components/Calc";
+
 
 export default function Home() {
+
+  
+
+  
   return (
-    <main>This is the main page</main>
+
+    <MaxwidthWrapper>
+
+      <Calc/>
+
+
+      
+    </MaxwidthWrapper>
+    
   );
 }
