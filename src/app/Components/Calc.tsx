@@ -269,13 +269,14 @@ const CalcStyles = styled.main`
 
         width: 100%;
         max-width: 450px;
+        height: 550px;
         border : 1px solid #E0E0E0;
     
     }
     .section-two{
     width : 100%;
     max-width : 400px;
-    height : 605px;
+    height : 550px;
     border : 1px solid ${props => props.theme.borderColors}
 
     }

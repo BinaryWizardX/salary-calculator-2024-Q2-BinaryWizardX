@@ -24,9 +24,7 @@ function Summery() {
                         <th>Amount</th>
                     </tr>
                 </thead>
-                <tr>
-                    {/* <td style={{ height: '16px' }} colSpan={2}></td> */}
-                </tr>
+                
                 <tbody>
                     <tr>
                         <td>Basic Salary</td>
@@ -137,7 +135,7 @@ const StyledSummery = styled.div`
         table{
         width: 100%;
         border-collapse:separate;
-        border-spacing:0 10px;
+        border-spacing:0 5px;
         }
         thead{
             margin-bottom : 50px;
