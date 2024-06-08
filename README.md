@@ -12,10 +12,10 @@ Before you begin, ensure you have the following requirements:
 ## Installation
 Follow these steps to setup the project. 
 
-1. Clone the repository:
+1. Clone the repository :
    ```bash
-  git clone https://github.com/BinaryWizardX/salary-calculator-2024-Q2-BinaryWizardX.git
-  cd salary-calculator-2024-Q2-BinaryWizardX
+     git clone https://github.com/BinaryWizardX/salary-calculator-2024-Q2-BinaryWizardX.git
+     cd salary-calculator-2024-Q2-BinaryWizardX
   
 2. Install the dependencies :
    ```bash
