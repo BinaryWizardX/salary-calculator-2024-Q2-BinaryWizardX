@@ -11,43 +11,38 @@ const updateGlobalContext = createContext();
 
 export function GlobalProvider({children}){
 
-    const [basicSalary, setBasicSalary] = useState(0);
-    const [TotalEarnings, setTotalEarnings] = useState(0);
-    const [grossEarnings, setGrossEarnings] = useState(0);
-    const [TotalEarningsForEPF, setTotalEarningsForEPF] = useState(0);
-    const [grossSalaryforEPF, setGrossSalaryForEPF] = useState(0);
-    const [grossDeductions, setGrossDeductions] = useState(0);
-    const [employeeEPF, setEmployeeEPF] = useState(0);
-    const [APIT, setAPIT] = useState(0);
+    const [basicSalary, setBasicSalary] = useState(Number(localStorage.getItem('basicSalary')) || 0);
+    const [TotalEarnings, setTotalEarnings] = useState(Number(localStorage.getItem('TotalEarnings')) || 0);
+    const [grossEarnings, setGrossEarnings] = useState(Number(localStorage.getItem('grossEarnings')) || 0);
+    const [TotalEarningsForEPF, setTotalEarningsForEPF] = useState(Number(localStorage.getItem('TotalEarningsForEPF')) || 0);
 
-    const [netSalary, setNetSalary] = useState(0);
-
-    const [employerEPF, setEmployerEPF] = useState(0);
-    const [employerETF, setEmployerETF] = useState(0);
-
-    const [CTC, setCTC] = useState(0);
+    const [grossSalaryforEPF, setGrossSalaryForEPF] = useState(Number(localStorage.getItem('grossSalaryforEPF')) || 0);
+    const [grossDeductions, setGrossDeductions] = useState(Number(localStorage.getItem('grossDeductions')) || 0);
+    const [employeeEPF, setEmployeeEPF] = useState(Number(localStorage.getItem('employeeEPF')) || 0);
 
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const [mode, setMode] = useState("Earnings");
-
-    const [method, setMethod] = useState("Add");
-
-
-    const [input1, setInput1] = useState("");
-    const [input2, setInput2] = useState(0);
-    const [isCheckd, setIsChecked] = useState(false);
-
-    
-
-    const [earnings, setEarnings] = useState([])
-
-    const [deductions, setDeductions] = useState([])
-
-    const [amountId, setAmountId] = useState(0)
+    const [APIT, setAPIT] = useState(Number(localStorage.getItem('APIT')) || 0);
+    const [netSalary, setNetSalary] = useState(Number(localStorage.getItem('netSalary')) || 0);
+    const [employerEPF, setEmployerEPF] = useState(Number(localStorage.getItem('employerEPF')) || 0);
+    const [employerETF, setEmployerETF] = useState(Number(localStorage.getItem('employerETF')) || 0);
 
 
+    const [CTC, setCTC] = useState(Number(localStorage.getItem('CTC')) || 0);
+    const [isOpen, setIsOpen] = useState(localStorage.getItem('isOpen') === 'true');
+    const [mode, setMode] = useState(localStorage.getItem('mode') || "Earnings");
+
+
+    const [method, setMethod] = useState(localStorage.getItem('method') || "Add");
+    const [input1, setInput1] = useState(localStorage.getItem('input1') || "");
+    const [input2, setInput2] = useState(Number(localStorage.getItem('input2')) || 0);
+
+
+    const [isCheckd, setIsChecked] = useState(localStorage.getItem('isCheckd') === 'true');
+    const [earnings, setEarnings] = useState(JSON.parse(localStorage.getItem('earnings')) || []);
+    const [deductions, setDeductions] = useState(JSON.parse(localStorage.getItem('deductions')) || []);
+    const [amountId, setAmountId] = useState(Number(localStorage.getItem('amountId')) || 0);
+
+     console.log(earnings)
     //Calculations
 
     useEffect(() => {
@@ -174,6 +169,35 @@ export function GlobalProvider({children}){
         setCTC(CTC_var);
 
     },[grossEarnings,employerEPF,employerETF])
+
+
+    useEffect(() => {
+        localStorage.setItem('basicSalary', basicSalary);
+        localStorage.setItem('TotalEarnings', TotalEarnings);
+        localStorage.setItem('grossEarnings', grossEarnings);
+        localStorage.setItem('TotalEarningsForEPF', TotalEarningsForEPF);
+        localStorage.setItem('grossSalaryforEPF', grossSalaryforEPF);
+        localStorage.setItem('grossDeductions', grossDeductions);
+        localStorage.setItem('employeeEPF', employeeEPF);
+        localStorage.setItem('APIT', APIT);
+        localStorage.setItem('netSalary', netSalary);
+        localStorage.setItem('employerEPF', employerEPF);
+        localStorage.setItem('employerETF', employerETF);
+        localStorage.setItem('CTC', CTC);
+        localStorage.setItem('isOpen', isOpen);
+        localStorage.setItem('mode', mode);
+        localStorage.setItem('method', method);
+        localStorage.setItem('input1', input1);
+        localStorage.setItem('input2', input2);
+        localStorage.setItem('isCheckd', isCheckd);
+        localStorage.setItem('earnings', JSON.stringify(earnings));
+        localStorage.setItem('deductions', JSON.stringify(deductions));
+        localStorage.setItem('amountId', amountId);
+    }, [basicSalary, TotalEarnings, grossEarnings, TotalEarningsForEPF, 
+        grossSalaryforEPF, grossDeductions, employeeEPF, APIT, 
+        netSalary, employerEPF, employerETF, CTC, isOpen, mode, 
+        method, input1, input2, isCheckd, earnings, 
+        deductions, amountId]);
 
 
     

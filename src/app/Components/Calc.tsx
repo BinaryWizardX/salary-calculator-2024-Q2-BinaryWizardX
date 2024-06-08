@@ -186,18 +186,7 @@ const CalcStyles = styled.main`
     min-height: 100vh;
     gap : 20px;
 
-    @media screen and (max-width: 750px) {
-        flex-direction: column;
-        gap : 20px;
-        margin-top : 70px;
-
-        .section-two{
-            
-            width : 450px;
-            
-
-        }
-    }
+   
 
 
     .cl-ed-icons{
@@ -269,14 +258,14 @@ const CalcStyles = styled.main`
 
         width: 100%;
         max-width: 450px;
-        height: 550px;
+        height: 580px;
         border : 1px solid #E0E0E0;
     
     }
     .section-two{
     width : 100%;
     max-width : 400px;
-    height : 550px;
+    height : 580px;
     border : 1px solid ${props => props.theme.borderColors}
 
     }
@@ -308,6 +297,21 @@ const CalcStyles = styled.main`
             border-radius: 4px;
             padding: 12px 15px;
             margin-top: 8px;
+
+        }
+    }
+
+     @media screen and (max-width: 750px) {
+        flex-direction: column;
+        gap : 20px;
+        margin-top : 70px;
+
+        .section-two{
+            
+            max-width : 446px;
+            width : 446px;
+            margin-bottom : 70px;
+            
 
         }
     }
