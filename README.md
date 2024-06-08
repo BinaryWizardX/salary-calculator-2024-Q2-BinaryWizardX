@@ -49,14 +49,14 @@ navigate to the live site:
 ## Technologies used
 
 This project is built with the following libraries adn frameworks
--Next.js: A React framework for production.
--React: A JavaScript library for building user interfaces.
--Tailwind CSS: A utility-first CSS framework for rapid UI development.
--React Icons: Include popular icons in your React projects easily with react-icons.
--ESLint: A static code analysis tool for identifying problematic patterns in JavaScript code.
--Styled-components : Styled-components is a library for React that lets you write CSS directly in your JavaScript to style components.
--clsx: clsx is a utility for conditionally combining class names in JavaScript.
--tailwind-merge: resolves and merges conflicting Tailwind CSS classes into a single class string.
+- Next.js: A React framework for production.
+- React: A JavaScript library for building user interfaces.
+- Tailwind CSS: A utility-first CSS framework for rapid UI development.
+- React Icons: Include popular icons in your React projects easily with react-icons.
+- ESLint: A static code analysis tool for identifying problematic patterns in JavaScript code.
+- Styled-components: A library for React that lets you write CSS directly in your JavaScript to style components.
+- clsx: A utility for conditionally combining class names in JavaScript.
+- tailwind-merge: Resolves and merges conflicting Tailwind CSS classes into a single class string.
 
 
 ## Contact
